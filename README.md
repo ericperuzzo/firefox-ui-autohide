@@ -2,6 +2,12 @@
 
 Auto-hide for Firefox's top toolbars, like Vivaldi's **UI Auto-hide**: the address bar (and tab/bookmarks toolbars) disappear until you move the pointer to the top edge of the window, then slide over the page without resizing it. Built for people who use **vertical tabs** and want every pixel for the page.
 
+![Demo: the toolbar hides and slides in when the pointer touches the top edge](docs/demo.gif)
+
+| Hidden (full page) | Pointer at top edge |
+|---|---|
+| ![hidden](docs/hidden.png) | ![revealed](docs/revealed.png) |
+
 *Tested on Firefox 157, Linux (Flatpak), vertical tabs enabled. Other platforms/versions: untested.*
 
 ## Install (any Firefox release): userChrome.css

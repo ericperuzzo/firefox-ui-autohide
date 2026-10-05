@@ -15,6 +15,8 @@ Vertical tabs (Firefox 136+) move tabs to the side, leaving a single top toolbar
 - Optional: only in full screen (current behavior, but without hiding the taskbar).
 
 ## Working prototype
+![demo](docs/demo.gif)
+
 This repository implements it in ~20 lines of CSS (`css/userChrome.css`): the toolbox shrinks to a few-pixel strip, grows on `:hover` / `:focus-within` / `:has([open])`, overlays content with `position: fixed` and a solid background. Key gotchas found while building it: Firefox's own `z-index` rules for the toolbox (0) and tabbox (2) beat unprivileged user styles unless `!important`; a `transform`-hidden toolbox does not receive hover reliably, a real few-pixel-high box does.
 
 ## Where to propose

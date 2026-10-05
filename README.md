@@ -34,7 +34,7 @@ Load via `about:debugging` → *Load Temporary Add-on* → `extension/manifest.j
 - Only the top toolbars are handled; the sidebar/vertical tabs are intentionally left untouched.
 - Vivaldi's status bar has no Firefox equivalent.
 
-See [PROPOSAL.md](PROPOSAL.md) for the case for a built-in option.
+See [PROPOSAL.md](PROPOSAL.md) for the case for a built-in option, and **[vote for it on Mozilla Connect](https://connect.mozilla.org/t5/ideas/built-in-quot-auto-hide-toolbars-quot-option-like-vivaldi-s-ui/idi-p/141628)**.
 
 ---
 

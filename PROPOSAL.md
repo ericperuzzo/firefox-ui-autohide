@@ -19,6 +19,9 @@ Vertical tabs (Firefox 136+) move tabs to the side, leaving a single top toolbar
 
 This repository implements it in ~20 lines of CSS (`css/userChrome.css`): the toolbox shrinks to a few-pixel strip, grows on `:hover` / `:focus-within` / `:has([open])`, overlays content with `position: fixed` and a solid background. Key gotchas found while building it: Firefox's own `z-index` rules for the toolbox (0) and tabbox (2) beat unprivileged user styles unless `!important`; a `transform`-hidden toolbox does not receive hover reliably, a real few-pixel-high box does.
 
+## Status
+Posted on Mozilla Connect: https://connect.mozilla.org/t5/ideas/built-in-quot-auto-hide-toolbars-quot-option-like-vivaldi-s-ui/idi-p/141628
+
 ## Where to propose
 - Mozilla Connect (ideas): https://connect.mozilla.org/
 - Bugzilla enhancement bug, product *Firefox*, component *Toolbars and Customization*.

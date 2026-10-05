@@ -1,0 +1,15 @@
+/* UI Auto-hide: painel superior (fundo sólido, cor do tema) */
+
+:root #navigator-toolbox {
+  position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important;
+  z-index: 1000 !important; max-height: 300px !important; transition: max-height .15s ease !important;
+}
+:root #navigator-toolbox:not(:hover):not(:focus-within):not(:has([open])) {
+  max-height: 6px !important; overflow: hidden !important;
+  -moz-window-dragging: no-drag !important; transition-delay: 250ms !important;
+}
+:root #navigator-toolbox:not(:hover):not(:focus-within):not(:has([open])) > * { opacity: 0 !important; }
+:root #navigator-toolbox:is(:hover, :focus-within, :has([open])) {
+  background-color: var(--toolbar-bgcolor, #1c1b22) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .35) !important;
+}

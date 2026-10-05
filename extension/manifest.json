@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "UI Auto-hide",
+  "version": "0.1.0",
+  "description": "Esconde automaticamente a interface do Firefox (abas, barra de endereço, favoritos, sidebar) e mostra ao aproximar o mouse da borda, como no Vivaldi.",
+  "browser_specific_settings": { "gecko": { "id": "ui-autohide@local" } },
+  "permissions": ["storage"],
+  "background": { "scripts": ["background.js"] },
+  "browser_action": { "default_title": "Alternar UI Auto-hide" },
+  "options_ui": { "page": "options.html", "open_in_tab": true },
+  "commands": {
+    "toggle-autohide": {
+      "suggested_key": { "default": "Ctrl+Alt+H" },
+      "description": "Ativar/desativar UI Auto-hide"
+    }
+  },
+  "experiment_apis": {
+    "chromeCSS": {
+      "schema": "schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["chromeCSS"]],
+        "script": "api.js"
+      }
+    }
+  }
+}

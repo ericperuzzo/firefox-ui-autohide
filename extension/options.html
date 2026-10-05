@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>UI Auto-hide</title>
+<style>
+  body { background:#1e1e1e; color:#ddd; font:14px system-ui,sans-serif; max-width:420px; margin:32px auto; }
+  h2 { font-size:13px; letter-spacing:.08em; border-bottom:1px solid #333; padding-bottom:10px; }
+  p { color:#aaa; line-height:1.5; }
+  label { display:flex; gap:10px; align-items:center; padding:7px 0; }
+  .sub { margin-left:28px; }
+  #warn { display:none; background:#4a3a12; padding:10px; border-radius:4px; color:#f3d98a; }
+</style>
+<h2>UI AUTO-HIDE</h2>
+<p>Esconde a interface do Firefox até você mover o ponteiro para a borda da janela. Ou selecione apenas algumas barras.</p>
+<div id="warn">Experiment API indisponível: defina <code>extensions.experiments.enabled</code> como <code>true</code> em about:config e recarregue a extensão. Por enquanto só o modo tela cheia funciona.</div>
+<label><input type="checkbox" id="enabled"> Ativar UI Auto-hide</label>
+<div class="sub">
+  <label><input type="checkbox" id="tabs"> Barra de abas</label>
+  <label><input type="checkbox" id="nav"> Barra de endereço</label>
+  <label><input type="checkbox" id="bookmarks"> Barra de favoritos</label>
+  <label><input type="checkbox" id="sidebar"> Sidebar (opcional; não use se quiser manter as abas laterais fixas)</label>
+</div>
+<label><input type="checkbox" id="fullscreenOnly"> Usar auto-hide somente em tela cheia</label>
+<h2 style="margin-top:24px">APARÊNCIA DA BARRA</h2>
+<label>Fundo
+  <select id="bgMode"><option value="solid">Cor sólida</option><option value="blur">Translúcido com desfoque</option></select></label>
+<label>Cor <input type="color" id="bgColor" value="#1c1b22"> <button id="themeColor" type="button">Usar cor do tema</button></label>
+<label>Opacidade (modo translúcido) <input type="range" id="bgOpacity" min="30" max="100"></label>
+<label>Atraso para esconder (ms) <input type="number" id="delay" min="0" max="2000" step="50" style="width:70px"></label>
+<label>Altura da faixa do mouse (px) <input type="number" id="strip" min="1" max="20" style="width:60px"></label>
+<script src="options.js"></script>

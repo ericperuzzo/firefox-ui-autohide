@@ -1,0 +1,10 @@
+[
+  {
+    "namespace": "chromeCSS",
+    "functions": [
+      { "name": "setCSS", "type": "function", "async": true,
+        "parameters": [{ "name": "css", "type": "string" }] },
+      { "name": "clear", "type": "function", "async": true, "parameters": [] }
+    ]
+  }
+]
